@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300;400;500;600;700&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --light-bg: #2b115d;
+  --dark-bg: #160a2d;
+  --navbar-bg: #221639;
+  --text: #ffffff;
+  --light-gradient: #9244f0;
+  --dark-gradient: #4937f0;
+  --active-heart: #ec5dbb;
+  --lines: #e4c4ff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #7f3ee7;
+  transition: 0.4s;
+}
+body {
+  width: 440px;
+  height: 800px;
+  background-image: linear-gradient(-45deg, var(--dark-bg), var(--light-bg));
+  font-family: "Cairo", sans-serif;
+ }
+/* =================== NAVBAR =================== */
+nav {
+  width: 100%;
+  position: fixed;
+  height: 10vh;
+  background-color: rgba(255, 255, 255, 0.08);
+  display: flex;
+  padding: 0px 20px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  backdrop-filter: blur(10px);
+}
+nav .left {
+  width: 50px;
+  cursor: pointer;
+}
+nav .right {
+  display: flex;
+  margin-right: -2px;
+  gap: 7px;
+}
+nav .right img {
+  width: 40px;
+  cursor: pointer;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 9vh;
+  background-image: linear-gradient(45deg, var(--light-bg), var(--dark-bg));
+}
+/* =================== HOME =================== */
+.container #home {
+  width: 100%;
+}
+.container #home .sec {
+  color: var(--text);
+  padding: 20px;
+  padding-top: 10px;
+  border-bottom: 2px solid var(--lines);
+}
+.container #home .sec ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.container #home .sec ul li {
+  width: 195px;
+  height: 60px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    45deg,
+    var(--light-gradient),
+    var(--dark-gradient)
+  );
+  padding-left: 10px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+}
+.container #home .sec ul li img {
+  width: 30px;
+}
+.container #home .sec ul li img[alt="sec8"],
+.container #home .sec ul li img[alt="secStore"],
+.container #home .sec ul li img[alt="uiGradients"],
+.container #home .sec ul li img[alt="colorHunt"] {
+  width: 26px;
+}
+.container #home .sec ul li img[alt="mockupworld"] {
+  margin-top: 5px;
+}
+.container #home .sec ul li img[alt="behance"] {
+  margin-top: 3px;
+}
+.container #home .sec ul li img[alt="pintrest"] {
+  width: 25px;
+}
+.container #home .sec ul li a {
+  font-size: 1.4rem;
+  margin-top: 4px;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 20px;
+}
+/* .container #home .sec ul li:nth-child(4) a {
+  margin-top: -7px;
+} */
+.container #home .sec ul li .fa-heart {
+  position: absolute;
+  right: 6px;
+  bottom: 5px;
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.container #home .sec ul li .fa-heart:hover,
+.container #home .sec ul li .fa-heart.active {
+  color: var(--active-heart);
+}
+/* =================== ADD =================== */
+.container #add {
+  width: 100%;
+  padding: 40px 30px;
+  display: none;
+}
+.container #add h1 {
+  color: var(--text);
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+.container #add form {
+  width: 100%;
+}
+.container #add form input {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 0px;
+  padding-left: 15px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--light-gradient);
+  background-color: var(--light-bg);
+  color: var(--text);
+}
+.container #add form input::placeholder {
+  color: var(--text);
+  opacity: 0.6;
+  font-weight: 500;
+}
+.container #add form button {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 0px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    45deg,
+    var(--light-gradient),
+    var(--dark-gradient)
+  );
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+.container #add form button:hover {
+  filter: brightness(1.2);
+}
+/* =================== FAV =================== */
+.container #fav {
+  width: 100%;
+  display: none;
+  position: relative;
+}
+.container #fav h1 {
+  color: var(--text);
+  margin-left: 15px;
+  margin-top: 5px;
+  font-size: 2rem;
+}
+.container #fav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 5px 15px;
+}
+.container #fav ul li {
+  width: 195px;
+  height: 60px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    45deg,
+    var(--light-gradient),
+    var(--dark-gradient)
+  );
+  padding-left: 10px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+}
+.container #fav ul li img {
+  width: 30px;
+}
+.container #fav ul li img[alt="sec8"],
+.container #fav ul li img[alt="secStore"],
+.container #fav ul li img[alt="uiGradients"],
+.container #fav ul li img[alt="colorHunt"] {
+  width: 26px;
+}
+.container #fav ul li img[alt="mockupworld"] {
+  margin-top: 5px;
+}
+.container #fav ul li img[alt="behance"] {
+  margin-top: 3px;
+}
+.container #fav ul li img[alt="pintrest"] {
+  width: 25px;
+}
+.container #fav ul li a {
+  font-size: 1.4rem;
+  margin-top: 4px;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 20px;
+}
+/* .container #fav ul li:nth-child(4) a {
+  margin-top: -7px;
+} */
+.container #fav ul li .fa-heart {
+  position: absolute;
+  right: 6px;
+  bottom: 5px;
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.container #fav ul li .fa-heart:hover,
+.container #fav ul li .fa-heart.active {
+  color: var(--active-heart);
+}
+.container .my {
+  display: none;
+}
+.container ul li .fa-xmark {
+  position: absolute;
+  right: 6px;
+  bottom: 4px;
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container ul li .fa-xmark:hover {
+  transform: rotate(90deg);
+}
+.container #fav h2 {
+  color: var(--text);
+  opacity: 0.4;
+  position: absolute;
+  font-size: 4.5rem;
+  font-weight: 600;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+/* POPUP ME */
+.container #popUpMe {
+  width: 100%;
+  height: 111%;
+  background-color: #2c115da1;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  left: 0px;
+  top: 10vh;
+  z-index: 98;
+  text-align: center;
+  transition: 0.4s;
+  opacity: 0;
+  pointer-events: none;
+}
+.container #popUpMe .xClose{
+  font-family: Arima;
+  font-size: 2rem;
+  color: var(--text);
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  transition: 0.3s;
+}
+.container #popUpMe .xClose:hover{
+  color: red;
+}
+
+.container #popUpMe .imgs {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  gap: 20px;
+}
+.container #popUpMe .imgs img {
+  width: 150px;
+  border-radius: 10px;
+  border: 2px solid #e4c4ff;
+  transition: 0.4s;
+}
+.container #popUpMe .imgs img:nth-child(1){
+  transform-origin: left bottom;
+}
+.container #popUpMe .imgs img:nth-child(2){
+  transform-origin: right bottom;
+}
+.container #popUpMe .imgs img:nth-child(1):hover{
+  transform: rotate(-5deg) scale(1.05);
+  box-shadow: 0px 0px 20px 0px #ffb8e658;
+}
+.container #popUpMe .imgs img:nth-child(2):hover{
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0px 0px 20px 0px #ffb8e658;
+}
+
+.container #popUpMe h2 {
+  font-size: 2rem;
+  margin-top:120px;
+  color: var(--text);
+}
+.container #popUpMe .icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.container #popUpMe .icons i {
+  font-size: 2.5rem;
+  color: var(--text);
+  transition: 0.3s;
+  opacity: 0.6;
+}
+.container #popUpMe .icons i:hover{
+  transform:scale(1.2);
+  opacity: 1;
+}

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Designers tool",
+  "version": "0.1.0",
+  "description": "Extention that can help you find what you nead",
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "./imgs/logo.16.png",
+    "48": "./imgs/logo.48.png",
+    "128": "./imgs/logo.128.png",
+    "256": "./imgs/logo.256.png"
+  }
+}
